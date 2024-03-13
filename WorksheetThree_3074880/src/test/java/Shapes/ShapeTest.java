@@ -21,5 +21,10 @@ public class ShapeTest {
 	    // Testing for area calculation if its correct
 	    assertEquals("Area calculation for Rhombus is incorrect", 6.0, rhombus.area(), 0.001);
 	}
-	
+	@Test
+	public void testRightAngledTriangleArea() {
+	    // Triangle to check area
+	    RightAngledTriangle triangle = new RightAngledTriangle("Triangle", 3.0, 4.0);
+	    assertEquals("Area calculation for RightAngledTriangle is incorrect", 6.0, triangle.area(), 0.001);
+	}
 }
