@@ -43,4 +43,13 @@ public class ShapeTest {
 	    RightAngledTriangle triangle = new RightAngledTriangle("Triangle", 3.0, 4.0);
 	    assertEquals("Area calculation for RightAngledTriangle is incorrect", 6.0, triangle.area(), 0.001);
 	}
+	@Test
+	public void testRightAngledTrianglePerimeter() {
+	    // Same triangle just for perimeter
+	    RightAngledTriangle triangle = new RightAngledTriangle("Triangle", 3.0, 4.0);
+	    //  hypotenuse for perimeter
+	    double hypotenuse = Math.sqrt(3.0 * 3.0 + 4.0 * 4.0);
+	    // Checks  whole perimeter
+	    assertEquals("Perimeter calculation for RightAngledTriangle is incorrect", 3.0 + 4.0 + hypotenuse, triangle.perimeter(), 0.001);
+	}
 }
