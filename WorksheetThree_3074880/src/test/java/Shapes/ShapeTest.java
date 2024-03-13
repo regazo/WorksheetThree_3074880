@@ -29,6 +29,15 @@ public class ShapeTest {
 	    assertEquals("Area calculation for Rhombus is incorrect", 6.0, rhombus.area(), 0.001);
 	}
 	@Test
+	public void testRhombusPerimeter() {
+	    // Rhombus with known diagonals to check perimeter.
+	    Rhombus rhombus = new Rhombus("Rhombus", 4.0, 3.0);
+	    // Calculate one side to get the perimeter.
+	    double side = Math.sqrt((4.0 * 4.0 + 3.0 * 3.0) / 4);
+	    // Verify the perimeter calculation.
+	    assertEquals("Perimeter calculation for Rhombus is incorrect", 4 * side, rhombus.perimeter(), 0.001);
+	}
+	@Test
 	public void testRightAngledTriangleArea() {
 	    // Triangle to check area
 	    RightAngledTriangle triangle = new RightAngledTriangle("Triangle", 3.0, 4.0);
