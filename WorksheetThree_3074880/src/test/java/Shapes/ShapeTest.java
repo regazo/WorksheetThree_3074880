@@ -15,6 +15,13 @@ public class ShapeTest {
 	    assertEquals("Area calculation for Circle is incorrect", Math.PI * 4, circle.area(), 0.001);
 	}
 	@Test
+	public void testCirclePerimeter() {
+	    // Circle  radius 2 to check for perimeter
+	    Circle circle = new Circle("Circle", 2.0);
+	    // Verify perimeter
+	    assertEquals("Perimeter calculation for Circle is incorrect", 2 * Math.PI * 2, circle.perimeter(), 0.001);
+	}
+	@Test
 	public void testRhombusArea() {
 	    //  rhombus to check  area calculation
 	    Rhombus rhombus = new Rhombus("Rhombus", 4.0, 3.0);
